@@ -8,7 +8,7 @@ pipeline {
 				sh 'exit 1'
 			}	
 		}
-		stage('Stage1') {			
+		stage('Stage2') {			
 			steps {
 				echo "Stage 2 is Running ----"
 				sh 'sleep 5'
