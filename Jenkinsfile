@@ -48,12 +48,12 @@ pipeline {
 						echo "Automation Testing"
 					}
 				}
-				stage('Auto1) {
+				stage('Auto1') {
 				      steps {
 					      sh 'sleep 5'
 					      echo "Automation Testing"
 					}
-				      }			         
+				 }			         
 			}
 		}
 	}
