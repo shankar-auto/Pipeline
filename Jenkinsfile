@@ -49,9 +49,9 @@ pipeline {
 				'''
 			}	
 		}
-		stage('TEST') {
+		stage('AUTO') {
 			parallel {
-				stage('AUTO') {
+				stage('AUTO1') {
 					steps {
 						sh 'sleep 5'
 						echo "Automation Testing"
