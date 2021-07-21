@@ -9,7 +9,6 @@ pipeline {
 				echo "BUILD is running ----"
 					sh 'sleep 5'
 				
-				}
 			}	
 		}
 		
