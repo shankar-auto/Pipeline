@@ -47,10 +47,19 @@ pipeline {
 						sh 'sleep 5'
 						echo "Automation Testing"
 					}
-				}	
-			
-			}	
+				}
+				stage('Auto1) {
+				      steps {
+					      sh 'sleep 5'
+					      echo "Automation Testing"
+					}
+				      }			         
+			}
 		}
-		
 	}
 }
+				
+	
+
+
+
