@@ -28,13 +28,13 @@ pipeline {
 				stage('TEST3') {
 					steps {
 						sh 'sleep 5'
-						echo "Testing Parallel'
+						echo "Testing Parallel"
 					}
 				}
 				stage('TEST4') {
 					steps {
 						sh 'sleep 5'
-						echo "Testing Parallel'
+						echo "Testing Parallel"
 					}
 				}
 			}	
