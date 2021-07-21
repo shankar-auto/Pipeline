@@ -4,7 +4,7 @@ pipeline {
 		string(name: 'TARGET_ENV', description: 'Target Environment to display')
 	}
 	environment {
-		DEPLOY_TO = "$(TARGET_ENV)"
+		DEPLOY_TO = "${TARGET_ENV}"
 	}
 	stages {
 		stage('DEPLOY_TEST') {
