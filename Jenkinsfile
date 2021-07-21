@@ -1,59 +1,17 @@
 pipeline {
 	agent any  
 	stages {
-		stage('BUILD') {
+		stage('Stage1') {
 			steps {
-				sh '''
-					pwd
-					sleep 5
-					echo This is the fist stage: BUILD
-				'''
+				echo "Stage 1 is running ----"
+				sh 'sleep 5'
+				sh 'exit 1'
 			}	
 		}
-		
-		stage('TEST') {
-			parallel{
-				stage('TEST1') {					
-					steps {
-						sh 'sleep 5'
-						echo "Testing Parallel"
-					}
-				}
-				stage('TEST2') {
-					steps {
-						sh 'sleep 5'
-						echo "Testing Parallel"
-					}
-				}
-				stage('TEST3') {
-					steps {
-						sh 'sleep 5'
-						echo "Testing Parallel"
-					}
-				}
-				stage('TEST4') {
-					steps {
-						sh 'sleep 5'
-						echo "Testing Parallel"
-					}
-				}
-			}	
-		}
-		
-		stage('DEPLOY') {
-			parallel {
-				stage('AUTO') {
-					steps {
-						sh 'sleep 5'
-						echo "Automation Testing"
-					}
-				}
-				stage('Auto1') {
-				      steps {
-					      sh 'sleep 5'
-					      echo "Automation Testing"
-					}
-				 }			         
+		stage('Stage1') {			
+			steps {
+				echo "Stage 2 is Running ----"
+				sh 'sleep 5'
 			}
 		}
 	}
