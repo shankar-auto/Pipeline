@@ -1,16 +1,30 @@
 pipeline {
 	agent any  
+	parameter2 {
+		string(name: 'TARGET_ENV', description: 'Target Environment to display')
+	}
+	environment {
+		DEPLOY_TO = "$(TARGET_ENV)"
+	}
 	stages {
-		stage('BUILD') {
+		stage('DEPLOY_TEST') {
 			when {
-				branch "main"
+				environment name: 'DEPLOY_TO', value: 'test'
 			}
 			steps {				
-				echo "BUILD is running ----"
-					sh 'sleep 5'
+				echo "DEPLOY To TEST Environment ----"
+				sh 'sleep 5'
 				
 			}	
 		}
-		
+		stage('DEPLOY_PROD') {
+			when {
+				environment name: 'DEPLOY_PROD' value: 'prod'
+			}
+			steps {
+				echo "DEPLOY TO PROD ENVIRONMENT----"
+				sh 'sleep 5'
+			}
+		}
 	}
 }
