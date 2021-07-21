@@ -1,6 +1,6 @@
 pipeline {
 	agent any  
-	parameter2 {
+	parameters {
 		string(name: 'TARGET_ENV', description: 'Target Environment to display')
 	}
 	environment {
