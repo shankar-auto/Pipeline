@@ -19,7 +19,7 @@ pipeline {
 		}
 		stage('DEPLOY_PROD') {
 			when {
-				environment name: 'DEPLOY_PROD' value: 'prod'
+				environment name: 'DEPLOY_TO' value: 'prod'
 			}
 			steps {
 				echo "DEPLOY TO PROD ENVIRONMENT----"
