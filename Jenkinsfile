@@ -41,23 +41,16 @@ pipeline {
 		}
 		
 		stage('DEPLOY') {
-			steps {
-				sh '''
-					pwd
-					sleep 5
-					echo This is the fist stage: DEPLOY
-				'''
-			}	
-		}
-		stage('AUTO') {
 			parallel {
-				stage('AUTO1') {
+				stage('AUTO') {
 					steps {
 						sh 'sleep 5'
 						echo "Automation Testing"
 					}
-				}					
-			}
+				}	
+			
+			}	
 		}
+		
 	}
 }
