@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('BUILD') {
 			when {
-				branch "master"
+				branch "main"
 			}
 			steps {				
 				echo "BUILD is running ----"
