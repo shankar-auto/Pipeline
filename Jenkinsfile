@@ -49,5 +49,14 @@ pipeline {
 				'''
 			}	
 		}
-	}
-}
+		stage('TEST') {
+			parallel {
+				stage('AUTO') {
+					steps {
+						sh 'sleep 5'
+						echo "Automation Testing"
+					}
+				}					
+			}
+		}
+
